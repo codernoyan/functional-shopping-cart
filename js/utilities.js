@@ -34,7 +34,20 @@ function updateTotalPrice(productNumber, productRate, elementId) {
 function subTotal(phoneId, caseId, subTotalId) {
     const phoneTotal = getTextElementValueById(phoneId);
     const caseTotal = getTextElementValueById(caseId);
-    
+
     const subTotal = phoneTotal + caseTotal;
     setTextElementValueById(subTotalId, subTotal);
+    return subTotal;
+}
+
+function taxAmount(taxId, taxRate, subtotal) {
+    const taxAmountString = (subtotal * taxRate).toFixed(2);
+    const taxTotal = parseFloat(taxAmountString);
+    setTextElementValueById(taxId, taxTotal);
+    return taxTotal;
+}
+
+function total(subTotal, taxAmount, totalId) {
+    const totalAmount = subTotal + taxAmount;
+    setTextElementValueById(totalId, totalAmount)
 }

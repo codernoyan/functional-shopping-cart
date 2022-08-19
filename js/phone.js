@@ -1,8 +1,3 @@
-/**
- * add event listener to phone plus button
- * 
- */
-
 
 document.getElementById('btn-phone-plus').addEventListener('click', function () {
     const phoneNumberTotal = updatePhoneNumber('phone-number', true);
@@ -28,4 +23,15 @@ document.getElementById('btn-phone-minus').addEventListener('click', function ()
     const taxTotalAmount = taxAmount('tax-total', 0.15, subTotalAmount);
     console.log(taxTotalAmount);
     total(subTotalAmount, taxTotalAmount, 'total');
+})
+
+document.getElementById('btn-remove').addEventListener('click', function () {
+    const phoneSection = document.getElementById('phone-section');
+
+    // first way(remove element permanently)
+    // const phoneParentNode = phoneSection.parentNode;
+    // phoneParentNode.removeChild(phoneSection);
+
+    // second way(display none only )
+    phoneSection.style.display = 'none';
 })

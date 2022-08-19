@@ -54,3 +54,10 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
+
+
+/* button styles */
+#btn-remove, #btn-delete{
+	border: none;
+	background: none;
+}

@@ -51,3 +51,4 @@ function total(subTotal, taxAmount, totalId) {
     const totalAmount = subTotal + taxAmount;
     setTextElementValueById(totalId, totalAmount)
 }
+
